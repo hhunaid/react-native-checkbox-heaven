@@ -63,9 +63,7 @@ class CheckBox extends PureComponent {
     _onChange() {
         const newVal = !this.state.checked
         const { onChange } = this.props
-        this.setState({ checked:newVal }, () => {
-            onChange(newVal)
-        })
+        onChange(newVal)
     }
 
     _renderIcon(iconName) {
